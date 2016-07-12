@@ -50,6 +50,12 @@ namespace HGString
 		allocate_memory();//allocate memory
 		char_array[0] = '\0';//string with length 0
 	}
+	String::String(HG_UINT64 initial_size)
+	{
+		size = initial_size + ExtraAllocation;
+		allocate_memory();//allocate memory
+		char_array[0] = '\0';//string with length 0
+	}
 	String::String(char* str)
 	{
 		for (HG_UINT64 i = 0; true; ++i)

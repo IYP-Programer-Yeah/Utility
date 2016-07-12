@@ -13,6 +13,7 @@ namespace HGString//String name space
 	{
 	public:
 		String();
+		String(HG_UINT64);
 		String(char*);
 		String(String&);
 		String(String&&);
