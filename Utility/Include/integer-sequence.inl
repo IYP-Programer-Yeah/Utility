@@ -4,11 +4,11 @@
 
 namespace Utility
 {
-	template <typename T, T... Series>
-	struct IntegralSequence {};
-
 	namespace Private
 	{
+		template <typename T, T... Series>
+		struct IntegralSequence {};
+
 		template <typename T>
 		constexpr bool is_empty_sequence(T Begin, T End, T Step)
 		{
@@ -35,10 +35,12 @@ namespace Utility
 		{
 			using Type = IntegralSequence<T>;
 		};
+
+		template <typename T, T End, T Begin = 0, T Step = 1>
+		using MakeIntegralSequence = typename Private::MakeIntegralSequenceImpl<T, Begin, End, Step>::Type;
 	}
 
+	using Private::IntegralSequence;
 	using Private::AppendIntegralSequence;
-
-	template <typename T, T End, T Begin = 0, T Step = 1>
-	using MakeIntegralSequence = typename Private::MakeIntegralSequenceImpl<T, Begin, End, Step>::Type;
+	using Private::MakeIntegralSequence;
 }
