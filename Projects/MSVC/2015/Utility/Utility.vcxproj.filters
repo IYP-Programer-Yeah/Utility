@@ -18,20 +18,20 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\..\Utility\Include\constexpr.inl">
-      <Filter>Header Files</Filter>
+    <None Include="Scripts\install.sh">
+      <Filter>Scripts</Filter>
     </None>
-    <None Include="..\..\..\..\Utility\Include\integer-sequence.inl">
+    <None Include="..\..\..\..\Utility\Include\constexpr.inl">
       <Filter>Header Files</Filter>
     </None>
     <None Include="..\..\..\..\Utility\Include\for-each.inl">
       <Filter>Header Files</Filter>
     </None>
-    <None Include="..\..\..\..\Utility\Include\tuple.inl">
+    <None Include="..\..\..\..\Utility\Include\integer-sequence.inl">
       <Filter>Header Files</Filter>
     </None>
-    <None Include="Scripts\install.sh">
-      <Filter>Scripts</Filter>
+    <None Include="..\..\..\..\Utility\Include\tuple.inl">
+      <Filter>Header Files</Filter>
     </None>
   </ItemGroup>
 </Project>
