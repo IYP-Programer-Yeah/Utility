@@ -91,7 +91,7 @@
       </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>PowerShell Scripts/intall.sh</Command>
+      <Command>PowerShell Scripts/install.sh</Command>
     </PostBuildEvent>
     <PostBuildEvent>
       <Message>Installing headers.</Message>
@@ -108,7 +108,7 @@
       </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>PowerShell Scripts/intall.sh</Command>
+      <Command>PowerShell Scripts/install.sh</Command>
     </PostBuildEvent>
     <PostBuildEvent>
       <Message>Installing headers.</Message>
@@ -131,7 +131,7 @@
       </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>PowerShell Scripts/intall.sh</Command>
+      <Command>PowerShell Scripts/install.sh</Command>
     </PostBuildEvent>
     <PostBuildEvent>
       <Message>Installing headers.</Message>
@@ -154,7 +154,7 @@
       </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>PowerShell Scripts/intall.sh</Command>
+      <Command>PowerShell Scripts/install.sh</Command>
     </PostBuildEvent>
     <PostBuildEvent>
       <Message>Installing headers.</Message>
