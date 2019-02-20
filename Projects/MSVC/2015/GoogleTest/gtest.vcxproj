@@ -95,10 +95,11 @@
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <AdditionalIncludeDirectories>..\..\..\..\Dependencies\googletest\googletest\include;..\..\..\..\Dependencies\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CallingConvention>Cdecl</CallingConvention>
     </ClCompile>
     <Lib />
     <PostBuildEvent>
-      <Command>PowerShell Scripts/intall.sh</Command>
+      <Command>PowerShell Scripts/install.sh</Command>
       <Message>Installing headers.</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -113,10 +114,11 @@
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <AdditionalIncludeDirectories>..\..\..\..\Dependencies\googletest\googletest\include;..\..\..\..\Dependencies\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CallingConvention>Cdecl</CallingConvention>
     </ClCompile>
     <Lib />
     <PostBuildEvent>
-      <Command>PowerShell Scripts/intall.sh</Command>
+      <Command>PowerShell Scripts/install.sh</Command>
       <Message>Installing headers.</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -129,10 +131,11 @@
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <AdditionalIncludeDirectories>..\..\..\..\Dependencies\googletest\googletest\include;..\..\..\..\Dependencies\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CallingConvention>Cdecl</CallingConvention>
     </ClCompile>
     <Lib />
     <PostBuildEvent>
-      <Command>PowerShell Scripts/intall.sh</Command>
+      <Command>PowerShell Scripts/install.sh</Command>
       <Message>Installing headers.</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -145,10 +148,11 @@
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <AdditionalIncludeDirectories>..\..\..\..\Dependencies\googletest\googletest\include;..\..\..\..\Dependencies\googletest\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CallingConvention>Cdecl</CallingConvention>
     </ClCompile>
     <Lib />
     <PostBuildEvent>
-      <Command>PowerShell Scripts/intall.sh</Command>
+      <Command>PowerShell Scripts/install.sh</Command>
       <Message>Installing headers.</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
