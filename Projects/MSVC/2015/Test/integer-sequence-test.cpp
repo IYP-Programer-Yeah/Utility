@@ -3,6 +3,7 @@
 
 #include <cstddef>
 #include <vector>
+#include <cinttypes>
 
 template <typename T, T... Is>
 std::vector<T> fill_vector(Utility::IntegerSequence<T, Is...>)
