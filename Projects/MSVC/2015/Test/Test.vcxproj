@@ -138,6 +138,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="for-each-order-test.cpp" />
+    <ClCompile Include="integer-sequence-test.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="tuple-test.cpp" />
   </ItemGroup>
