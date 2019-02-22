@@ -14,6 +14,14 @@ void PassTupleElementsTestFunction3(IntegerType<0>, IntegerType<1>, IntegerType<
 void PassTupleElementsTestFunction4(IntegerType<0>, IntegerType<1>, IntegerType<2>, IntegerType<3>) { count = 4; }
 void PassTupleElementsTestFunction5(IntegerType<0>, IntegerType<1>, IntegerType<2>, IntegerType<3>, IntegerType<4>) { count = 5; }
 
+
+struct MakeFromTupleTestStruct
+{
+	template <typename... Ts>
+	MakeFromTupleTestStruct(Ts&&...) : count(sizeof...(Ts)) {}
+	const std::size_t count;
+};
+
 TEST(PassTupleElementsTest, Simple)
 {
 	count = 0;
@@ -31,4 +39,13 @@ TEST(PassTupleElementsTest, Simple)
 	count = 0;
 	Utility::call_with_tuple_elements(PassTupleElementsTestFunction5, std::tuple<IntegerType<0>, IntegerType<1>, IntegerType<2>, IntegerType<3>, IntegerType<4>>());
 	EXPECT_EQ(count, 5);
+}
+
+TEST(MakeFromTupleTest, Simple)
+{
+	EXPECT_EQ(Utility::make_from_tuple<MakeFromTupleTestStruct>(std::tuple<IntegerType<0>>()).count, 1);
+	EXPECT_EQ(Utility::make_from_tuple<MakeFromTupleTestStruct>(std::tuple<IntegerType<0>, IntegerType<1>>()).count, 2);
+	EXPECT_EQ(Utility::make_from_tuple<MakeFromTupleTestStruct>(std::tuple<IntegerType<0>, IntegerType<1>, IntegerType<2>>()).count, 3);
+	EXPECT_EQ(Utility::make_from_tuple<MakeFromTupleTestStruct>(std::tuple<IntegerType<0>, IntegerType<1>, IntegerType<2>, IntegerType<3>>()).count, 4);
+	EXPECT_EQ(Utility::make_from_tuple<MakeFromTupleTestStruct>(std::tuple<IntegerType<0>, IntegerType<1>, IntegerType<2>, IntegerType<3>, IntegerType<4>>()).count, 5);
 }
