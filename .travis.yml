@@ -1,0 +1,27 @@
+language: cpp
+compiler:
+  - gcc-5
+os:
+  - linux
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - gcc-5
+      - g++-5
+
+script:
+  - mkdir Projects/CMake/Build -p
+  - cd Projects/CMake/Build
+  - ls
+  - export CC=gcc-5
+  - export CXX=g++-5
+  - cmake --version
+  - cmake ..
+  - ls
+  - make -n
+  - make --prefix=. install
+  - ls
+after_success:

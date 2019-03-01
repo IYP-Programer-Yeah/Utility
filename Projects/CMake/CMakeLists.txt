@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 2.6)
+cmake_minimum_required (VERSION 3.5)
 
 set(REPO_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/../..)
 set(CMAKE_PROJECT_ROOT ${REPO_ROOT}/Projects/CMake)
