@@ -1,0 +1,11 @@
+project(Utility)
+
+file(GLOB INL_FILES ${REPO_ROOT}/${PROJECT_NAME}/Include/*.inl)
+
+add_custom_target(${PROJECT_NAME}_HEADERS ALL
+	${CMAKE_COMMAND} -E make_directory ${LOCAL_INCLUDE_DIR}/${PROJECT_NAME}
+	COMMAND ${CMAKE_COMMAND} -E copy ${INL_FILES} ${LOCAL_INCLUDE_DIR}/${PROJECT_NAME})
+
+add_library(${PROJECT_NAME} INTERFACE)
+target_include_directories(${PROJECT_NAME} INTERFACE ${LOCAL_INCLUDE_DIR})
+add_dependencies(${PROJECT_NAME} ${PROJECT_NAME}_HEADERS)
