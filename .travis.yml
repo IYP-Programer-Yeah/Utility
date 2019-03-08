@@ -15,13 +15,11 @@ addons:
 script:
   - mkdir Projects/CMake/Build -p
   - cd Projects/CMake/Build
-  - ls
   - export CC=gcc-5
   - export CXX=g++-5
   - cmake --version
   - cmake .. -DCMAKE_INSTALL_PREFIX:PATH=./Artifact
-  - ls
   - make
   - make install
-  - ls
+  - ./Artifact/bin/Test
 after_success:
