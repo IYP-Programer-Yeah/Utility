@@ -9,3 +9,10 @@ add_custom_target(${PROJECT_NAME}_HEADERS ALL
 add_library(${PROJECT_NAME} INTERFACE)
 target_include_directories(${PROJECT_NAME} INTERFACE ${LOCAL_INCLUDE_DIR})
 add_dependencies(${PROJECT_NAME} ${PROJECT_NAME}_HEADERS)
+
+if (WIN32)
+	install(DIRECTORY ${REPO_ROOT}/${PROJECT_NAME}/Include/ DESTINATION Include/${PROJECT_NAME})
+else()
+	install(DIRECTORY ${REPO_ROOT}/${PROJECT_NAME}/Include/ DESTINATION include/${PROJECT_NAME})
+endif()
+

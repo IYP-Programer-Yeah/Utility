@@ -19,9 +19,9 @@ script:
   - export CC=gcc-5
   - export CXX=g++-5
   - cmake --version
-  - cmake ..
+  - cmake .. -DCMAKE_INSTALL_PREFIX:PATH=./Artifact
   - ls
-  - make -n
-  - make --prefix=. install
+  - make
+  - make install
   - ls
 after_success:
