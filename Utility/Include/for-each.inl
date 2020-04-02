@@ -2,8 +2,10 @@
 
 #include <utility>
 
-#include "constexpr.inl"
+#include "Iyp/Utility/constexpr.inl"
 
+namespace Iyp
+{
 namespace Utility
 {
 namespace Private
@@ -20,5 +22,7 @@ CPP_14_CONSTEXPR void for_each(F &&f, Args &&... args)
     NoOpCtor{(f(std::forward<Args>(args)), true)...};
 }
 } // namespace Private
+
 using Private::for_each;
 } // namespace Utility
+} // namespace Iyp
