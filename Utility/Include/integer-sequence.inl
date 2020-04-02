@@ -2,6 +2,8 @@
 
 #include <utility>
 
+namespace Iyp
+{
 namespace Utility
 {
 namespace Private
@@ -65,3 +67,4 @@ using Private::AppendIntegerSequence;
 using Private::IntegerSequence;
 using Private::MakeIntegerSequence;
 } // namespace Utility
+} // namespace Iyp
