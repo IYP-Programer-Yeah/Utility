@@ -7,12 +7,12 @@ static std::size_t count = 0;
 
 void OrderTestFunction(std::size_t n)
 {
-	if (n == count)
-		count++;
+    if (n == count)
+        count++;
 }
 
 TEST(ForEachOrderTest, Simple)
 {
-	Utility::for_each(OrderTestFunction, 0, 1, 2, 3, 4);
-	EXPECT_EQ(count, 5);
+    Utility::for_each(OrderTestFunction, 0, 1, 2, 3, 4);
+    EXPECT_EQ(count, 5);
 }
